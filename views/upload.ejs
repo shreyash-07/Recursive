@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Upload</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .upload-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .upload-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .upload-container p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .upload-label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .upload-input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+        }
+        .upload-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .upload-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload Your PDF</h1>
+        <p>Please choose a PDF file to upload. Only PDF files are accepted.</p>
+        <form action="/user/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <label for="pdf-upload" class="upload-label">Choose a PDF:</label>
+            <input type="file" id="pdf-upload" name="Pdf" accept="application/pdf" class="upload-input" required>
+            <button type="submit" class="upload-button">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
